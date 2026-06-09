@@ -1,9 +1,9 @@
 const sql = require('mssql');
 
 const config = {
-    user: 'sa',
-    password: 'Pratham',
-    server: 'localhost',
+    user: '',
+    password: '',
+    server: '',
     port: 1433,
     database: 'guesthouse_management_system',
     options: {
