@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - GrandStay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo-section">
+                <small>GUESTHOUSE MANAGEMENT</small>
+                <h1>ACW Stay</h1>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">E</div>
+                <div class="user-info">
+                     <span>Employee</span>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <p class="nav-label">MY PORTAL</p>
+                <a href="employee-dashboard.html" class="active">
+                    <span class="nav-icon">📊</span> Dashboard
+                </a>
+                <a href="rate-board.html">
+                    <span class="nav-icon">💵</span> Rate board
+                </a>
+                <a href="request-room.html">
+                    <span class="nav-icon">🏠</span> Request Room
+                </a>
+                <a href="meal-schedule.html">
+                    <span class="nav-icon">☕</span> Meal Schedule
+                </a>
+                <a href="request-status.html">
+                    <span class="nav-icon">✉️</span> My Requests
+                </a>
+                <a href="employee-billing.html">
+                    <sapn class="nav-icon">📄</sapn> View My Bill
+                </a>
+            </div>
+
+            <div class="sidebar-footer">
+                <button onclick="logout()" class="logout-btn">
+                    <span class="nav-icon">↪</span> Logout
+                </button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h2>Employee Dashboard</h2>
+                
+            </header>
+
+            <section class="welcome-banner">
+                <div class="banner-content">
+                    <small>WELCOME BACK</small>
+                    <h1>Good morning</h1>
+                    <p>Here's a quick overview of your portal.</p>
+                </div>
+            </section>
+
+            <p class="section-label">QUICK ACTIONS </p>
+            
+            <section class="action-grid">
+                <a href="request-room.html" class="action-card">
+                    <div class="card-icon">🏠</div>
+                    <h3>Request a Room</h3>
+                    <p>Submit a new room request for your stay.</p>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="meal-schedule.html" class="action-card">
+                    <div class="card-icon">☕</div>
+                    <h3>View Meal Schedule</h3>
+                    <p>Check today's and upcoming meal timings.</p>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="request-status.html" class="action-card">
+                    <div class="card-icon">✉️</div>
+                    <h3>My Requests</h3>
+                    <p>Track the status of your submitted requests.</p>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="employee-billing.html" class="action-card">
+                    <div class="card-icon">📄</div>
+                    <h3>View My Bill</h3>
+                    <p>Track the status of your total bill</p>
+                    <span class="arrow">→</span>
+                </a>
+
+            </section>
+                
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

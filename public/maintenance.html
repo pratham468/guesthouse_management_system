@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Portal - ACW Stay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="loadMyMaintenance()">
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo-section">
+                <small>GUESTHOUSE MGMT</small>
+                <h1>ACW Stay</h1>
+            </div>
+            <br>
+            <div class="nav-links">
+                <p class="nav-label">MY PORTAL</p>
+                <a href="employee-dashboard.html">Dashboard</a>
+                <a href="request-room.html">Request Room</a>
+                <a href="meal-schedule.html">Meal Schedule</a>
+                <a href="request-status.html">My Requests</a>
+                <a href="employee-billing.html">View My Bill</a>
+            </div>
+            <div class="sidebar-footer">
+                <button onclick="logout()" class="logout-btn">
+                    <span class="nav-icon">↪</span>Logout
+                </button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h2>Maintenance Portal</h2>
+                <a href="employee-dashboard.html" style="text-decoration: none;">
+                    <button class="secondary-btn">Back to Dashboard</button>
+                </a>
+            </header>
+
+            <section class="form-card">
+                <h3>Raise Maintenance Request</h3>
+                <div class="form-grid">
+                    <div class="input-group full-width">
+                        <label>Describe Issue</label>
+                        <textarea id="issue" placeholder="Please provide details about the maintenance needed..." rows="4"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="secondary-btn" onclick="submitRequest()">Submit Request</button>
+                    <p id="msg" class="status-msg"></p>
+                </div>
+                
+                <h3 class="section-divider">My Maintenance History</h3>
+                <div style="overflow-x: auto;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Room</th>
+                                <th>Guesthouse</th>
+                                <th>Issue</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myMaintenanceTable">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

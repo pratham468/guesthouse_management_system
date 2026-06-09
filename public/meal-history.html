@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal History - GrandStay Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="loadMealHistory()">
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo-section">
+                <small>ADMIN PORTAL</small>
+                <h1>GrandStay</h1>
+            </div>
+            <div class="nav-links">
+                <p class="nav-label">MANAGEMENT</p>
+                <a href="manager-dashboard.html">Dashboard</a>
+                <a href="manage-meal.html">Meal Schedule</a>
+                <a href="meal-history.html" class="active">Meal History</a>
+            </div>
+            <div class="sidebar-footer">
+                <button onclick="logout()" class="logout-btn">
+                    <span class="nav-icon">↪</span>Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-header"  style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="header-titles">
+                    <h2>Meal History</h2>
+                    <p>previous meal menus and pricing updates</p>
+                </div>
+                <a href="manage-meal.html" style="text-decoration: none;">
+                        <button class="secondary-btn">← Meal Schedule</button>
+                </a>
+            </header>
+
+            <section class="data-card">
+                <div id="mealList">
+                    <p style="padding:20px; color:var(--text-light);">Loading history...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

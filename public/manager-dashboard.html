@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadStats()">
+    <div class="app-container">
+    <nav class="sidebar">
+        <div class="logo-section">
+            <small>GUESTHOUSE MGMT</small>
+            <h1>ACW Stay</h1>
+        </div>
+
+        <div class="user-profile">
+            <div class="avatar">M</div>
+            <div class="user-info">
+                <strong>Admin Manager</strong>
+                
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <p class="nav-label">MY PORTAL</p>
+            <a href="manager-dashboard.html" class="active">Dashboard</a>
+            <a href="manage-requests.html">Room Requests</a>
+            <a href="manage-meal.html">Meal Schedule</a>
+            <a href="occupied-rooms.html">Occupied Rooms</a>
+            <a href="room-history.html">Room History</a>
+            <a href="billing.html">Billing System</a>
+        </div>
+
+        <div class="sidebar-footer">
+                <button onclick="logout()" class="logout-btn">
+                    <span class="nav-icon">↪</span> Logout
+                </button>
+            </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="top-header">
+            <h2>Manager Dashboard</h2>
+        </header>
+
+        <section class="welcome-banner">
+            <div class="banner-text">
+                <small>WELCOME BACK</small>
+                <h1>Good morning, Admin 👋</h1>
+                <p>Here's a quick overview of the guesthouse status.</p>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="icon">🏨</div>
+                <h3  id="total">—</h3>
+                <p>Total Rooms</p>
+            </div>
+            <div class="stat-card">
+                <div class="icon">✅</div>
+                <h3  id="available">—</h3>
+                <p>Available</p>
+            </div>
+            <div class="stat-card">
+                <div class="icon">🔑</div>
+                <h3  id="occupied">—</h3>
+                <p>Occupied</p>
+            </div>
+      </div>
+        </section>
+    </main>
+</div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

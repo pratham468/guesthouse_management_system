@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadBillPage()">
+
+<div class="container">
+    
+    <div id="invoice" style="max-width:800px;margin:auto;background:#fff;border-radius:12px;overflow:hidden;font-family:Inter, sans-serif;">
+
+    <!-- 🔥 HEADER -->
+    <div style="background:#3f3a3a;padding:20px;color:#fff;">
+        <div style="display:flex;justify-content:space-between;">
+            <div>
+                <h2 style="margin:0;">ACW Stay</h2>
+                <small>Guesthouse MGMT</small>
+            </div>
+            <div style="text-align:right;">
+                <small>INVOICE</small>
+                <h3 id="invoiceId" style="color:#f4a261;margin:0;"></h3>
+            </div>
+        </div>
+
+        <hr style="border-color:#363030; margin:15px 0;">
+
+        <div style="display:flex;justify-content:space-between;">
+            <div>
+                <small>CHECK-IN</small>
+                <p id="checkin"></p>
+            </div>
+            <div>
+                <small>CHECK-OUT</small>
+                <p id="checkout"></p>
+            </div>
+            <div>
+                <small>GENERATED</small>
+                <p id="todayDate"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔥 USER INFO -->
+    <div style="padding:20px;">
+        <h3 id="name"></h3>
+        <p>
+            Room <span id="room"></span> · 
+            <span id="type"></span>
+        </p>
+
+        <div style="display:inline-block;background:#574f4f;color:#fff;padding:6px 12px;border-radius:20px;">
+            <span id="days"></span> nights
+        </div>
+    </div>
+
+    <!-- 🔥 CHARGES -->
+    <div style="padding:20px;">
+        <h4>Charges</h4>
+
+        <div style="display:flex;justify-content:space-between;padding:8px 0;">
+            <span>Room Charges</span>
+            <span id="roomAmount"></span>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;padding:8px 0;">
+            <span>Meal Charges</span>
+            <span id="mealAmount"></span>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;color:green;">
+            <span>Employee Discount (10%)</span>
+            <span id="discount"></span>
+        </div>
+
+        <hr>
+
+        <div style="display:flex;justify-content:space-between;">
+            <span>GST (5%)</span>
+            <span id="gst"></span>
+        </div>
+
+        <hr>
+
+        <h2 style="display:flex;justify-content:space-between;">
+            <span>Total Payable</span>
+            <span id="finalTotal"></span>
+        </h2>
+    </div>
+    <br>
+    <br>
+    <br>
+            <h4 style="text-align:right;">Manager Signature</h4>
+
+</div>
+<br>
+<button onclick="printBill()" class="primary-btn">Print Bill</button>
+    <br><br>
+
+    <a href="billing.html">
+        <button>Back</button>
+    </a>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>

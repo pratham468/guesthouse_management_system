@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Meals - ACW Stay Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="loadMealSchedule()">
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo-section">
+                <small>ADMIN PORTAL</small>
+                <h1>ACW Stay</h1>
+            </div>
+            <div class="user-profile">
+                <div class="avatar">M</div>
+                <div class="user-info"><strong>Admin Manager</strong></div>
+            </div>
+            <div class="nav-links">
+                <p class="nav-label">MANAGEMENT</p>
+                <a href="manager-dashboard.html">Dashboard</a>
+                <a href="manage-requests.html">Room Requests</a>
+                <a href="manage-meal.html" class="active">Meal Schedule</a>
+                <a href="occupied-rooms.html">Occupied Rooms</a>
+                <a href="room-history.html">Room History</a>
+                <a href="billing.html">Billing System</a>
+            </div>
+            <div class="sidebar-footer">
+                <button onclick="logout()" class="logout-btn">
+                    <span class="nav-icon">↪</span>Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-header" style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>Update Meal Schedule</h2>
+                <a href="meal-history.html" style="text-decoration: none;">
+                    <button class="secondary-btn">View Meal History</button>
+                </a>
+            </header>
+
+            <section class="form-card">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Breakfast Menu</label>
+                        <input type="text" id="breakfast" placeholder="e.g. Poha, Tea, Fruit">
+                    </div>
+                    <div class="input-group">
+                        <label>Breakfast Price (₹)</label>
+                        <input type="number" id="breakfast_price">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Lunch Menu</label>
+                        <input type="text" id="lunch" placeholder="e.g. Veg Thali">
+                    </div>
+                    <div class="input-group">
+                        <label>Lunch Price (₹)</label>
+                        <input type="number" id="lunch_price">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Dinner Menu</label>
+                        <input type="text" id="dinner" placeholder="e.g. Roti, Paneer, Dal">
+                    </div>
+                    <div class="input-group">
+                        <label>Dinner Price (₹)</label>
+                        <input type="number" id="dinner_price">
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; display: flex; gap: 10px;">
+                    <button class="primary-btn" onclick="updateMeal()">Save Changes</button>
+                </div>
+                
+                <p id="msg" style="margin-top: 15px; font-weight: 600; color: var(--sidebar-accent);"></p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

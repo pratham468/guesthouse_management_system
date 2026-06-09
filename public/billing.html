@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body onload="loadAllBilling()">
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo-section">
+                <small>GUESTHOUSE MGMT</small>
+                <h1>ACW Stay</h1>
+            </div>
+            <div class="user-profile">
+                <div class="avatar">M</div>
+                <div class="user-info"><strong>Admin Manager</strong></div>
+            </div>
+            <div class="nav-links">
+                <p class="nav-label">MANAGEMENT</p>
+                <a href="manager-dashboard.html">Dashboard</a>
+                <a href="manage-requests.html">Room Requests</a>
+                <a href="manage-meal.html">Meal Schedule</a>
+                <a href="occupied-rooms.html">Occupied Rooms</a>
+                <a href="room-history.html">Room History</a>
+                <a href="billing.html" class="active">Billing System</a>
+            </div>
+            
+            <div class="sidebar-footer">
+                <button onclick="logout()" class="logout-btn">
+                    <span class="nav-icon">↪</span>Logout</button>
+            </div>
+        </nav>
+
+        <main class= "main-content">
+            <header class="top-header">
+                <div class="header-titles">
+                    <h2>Billing System</h2>
+                    <p>Total bill amount of each employees and guests</p>
+                </div>
+            </header>
+
+            <section class="data-card">
+                <div id="billList" class="table-container"></div>  
+
+                <!-- 🔥 Invoice View -->
+                    <div id="billView" style="margin-top:20px;"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</body>
+</html>

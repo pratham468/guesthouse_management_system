@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Occupied Rooms - GrandStay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="loadOccupiedRooms()">
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo-section">
+                <small>GUESTHOUSE MGMT</small>
+                <h1>GrandStay</h1>
+            </div>
+            <div class="user-profile">
+                <div class="avatar">M</div>
+                <div class="user-info"><strong>Admin Manager</strong></div>
+            </div>
+            <div class="nav-links">
+                <p class="nav-label">MANAGEMENT</p>
+                <a href="manager-dashboard.html">Dashboard</a>
+                <a href="manage-requests.html">Room Requests</a>
+                <a href="manage-meal.html">Meal Schedule</a>
+                <a href="occupied-rooms.html" class="active">Occupied Rooms</a>
+                <a href="room-history.html">Room History</a>
+                <a href="billing.html">Billing System</a>
+            </div>
+            <div class="sidebar-footer">
+                <button onclick="logout()" class="logout-btn">
+                    <span class="nav-icon">↪</span>Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h2>Occupied Rooms</h2>
+                <div class="header-actions">
+                    <a href="manager-dashboard.html" class="back-link">← Back to Dashboard</a>
+                </div>
+            </header>
+
+            <section class="data-card">
+                <div id="roomList" class="table-container">
+                    </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Billing - ACW Stay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="loadMyBill()">
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo-section">
+                <small>GUESTHOUSE MGMT</small>
+                <h1>ACW Stay</h1>
+            </div>
+            <br>
+            <div class="nav-links">
+                <p class="nav-label">MY PORTAL</p>
+                <a href="employee-dashboard.html">Dashboard</a>
+                <a href="rate-board.html">Rate Board</a>
+                <a href="request-room.html">Request Room</a>
+                <a href="meal-schedule.html">Meal Schedule</a>
+                <a href="request-status.html">My Requests</a>
+                <a href="employee-billing.html" class="active">View My Bill</a>
+            </div>
+            <div class="sidebar-footer">
+                <button onclick="logout()" class="logout-btn">
+                    <span class="nav-icon">↪</span>Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h2>My Billing Details</h2>
+                <a href="employee-dashboard.html" class="back-link">← Back</a>
+            </header>
+
+            <section class="data-card">
+                <div id="myBill" class="table-container">
+                </div>
+            </section>
+        </main>
+    </div>
+``
+    <script src="script.js"></script>
+</body>
+</html>

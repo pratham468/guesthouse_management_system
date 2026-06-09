@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Room - ACW Stay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo-section">
+                <small>GUESTHOUSE MGMT</small>
+                <h1>ACW Stay</h1>
+            </div>
+            <br>
+            <div class="nav-links">
+                <p class="nav-label">MY PORTAL</p>
+                <a href="employee-dashboard.html">Dashboard</a>
+                <a href="rate-board.html">Rate Board</a>
+                <a href="request-room.html" class="active">Request Room</a>
+                <a href="meal-schedule.html">Meal Schedule</a>
+                <a href="request-status.html">My Requests</a>
+                <a href="employee-billing.html">View My Bill</a>
+            </div>
+            <div class="sidebar-footer">
+                <button onclick="logout()" class="logout-btn">
+                    <span class="nav-icon">↪</span>Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h2> Room Request Form</h2>
+                <a href="maintenance.html" style="text-decoration: none;">
+                    <button class="secondary-btn">Request Maintenance</button>
+                </a>
+            </header>
+
+            <section class="form-card">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Check-in Date</label>
+                        <input type="date" id="check_in">
+                    </div>
+                    <div class="input-group">
+                        <label>Check-out Date</label>
+                        <input type="date" id="check_out">
+                    </div>
+                    <div class="input-group full-width">
+                        <label>Reason for Stay</label>
+                        <input type="text" id="reason" placeholder="e.g. Indusrial work">
+                    </div>
+                    <div class="input-group">
+                        <label>Guesthouse</label>
+                        <select id="guesthouse">
+                            <option value="Lagoon">Lagoon</option>
+                            <option value="ABPS">ABPS</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Room Type</label>
+                        <select id="room_type">
+                            <option value="Single">Single</option>
+                            <option value="Double">Double</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>AC Type</label>
+                        <select id="ac_type">
+                            <option value="AC">AC</option>
+                            <option value="Non-AC">Non-AC</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="secondary-btn" onclick="loadAvailableRooms()">Check Availability</button>
+                    <div class="input-group" style="margin-top: 15px;">
+                        <label>Select Available Room</label>
+                        <select id="room_number"></select>
+                    </div>
+                    <button class="secondary-btn" onclick="submitRequest()" style="margin-top: 20px;">Submit Request</button>
+                </div>
+                <p id="msg" class="status-msg"></p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

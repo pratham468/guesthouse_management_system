@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Guest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Guest Booking</h2>
+
+        <input type="text" id="guest_name" placeholder="Guest Name">
+        <input type="date" id="check_in">
+        <input type="date" id="check_out">
+        <input type="text" id="reason" placeholder="Reason">
+
+        <select id="guesthouse">
+            <option value="Lagoon">Lagoon</option>
+            <option value="ABPS">ABPS</option>
+        </select>
+
+        <select id="room_type">
+            <option value="Single">Single</option>
+            <option value="Double">Double</option>
+        </select>
+
+        <select id="ac_type">
+            <option value="AC">AC</option>
+            <option value="Non-AC">Non-AC</option>
+        </select>
+
+        <button onclick="loadAvailableRooms()">Show Available Rooms</button>
+
+        <select id="room_number"></select>
+
+        <button onclick="addGuest()">Book Guest</button>
+
+        <p id="msg"></p>
+
+        <a href="manager-dashboard.html">
+            <button>Back</button>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

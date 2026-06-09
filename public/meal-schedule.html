@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal Schedule - ACW Stay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="loadMealSchedule()">
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo-section">
+                <small>GUESTHOUSE MGMT</small>
+                <h1>ACW Stay</h1>
+            </div>
+            <br>
+            <div class="nav-links">
+                <p class="nav-label">MY PORTAL</p>
+                <a href="employee-dashboard.html">Dashboard</a>
+                <a href="rate-board.html">Rate Board</a>
+                <a href="request-room.html">Request Room</a>
+                <a href="meal-schedule.html" class="active">Meal Schedule</a>
+                <a href="request-status.html">My Requests</a>
+                <a href="employee-billing.html">View My Bill</a>
+
+            </div>
+            <div class="sidebar-footer">
+                <button onclick="logout()" class="logout-btn">
+                    <span class="nav-icon">↪</span>Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-titles">
+                    <h2>Today's Meal Schedule</h2>
+                    <p>View current menu and pricing for guesthouse dining</p>
+                </div>
+            </header>
+
+            <div class="action-grid">
+                <div class="stat-card">
+                    <div class="card-icon">🍳</div>
+                    <h3 id="breakfast_title">Breakfast</h3>
+                    <p id="breakfast_desc" style="color:#8b8a85; margin: 8px 0;"></p>
+                    <h2 id="breakfast_price" style="color: var(--sidebar-accent);"></h2>
+                </div>
+
+                <div class="stat-card">
+                    <div class="card-icon">🥗</div>
+                    <h3 id="lunch_title">Lunch</h3>
+                    <p id="lunch_desc" style="color:#8b8a85; margin: 8px 0;"></p>
+                    <h2 id="lunch_price" style="color: var(--sidebar-accent);"></h2>
+                </div>
+
+                <div class="stat-card">
+                    <div class="card-icon">🍽️</div>
+                    <h3 id="dinner_title">Dinner</h3>
+                    <p id="dinner_desc" style="color:#8b8a85; margin: 8px 0;"></p>
+                    <h2 id="dinner_price" style="color: var(--sidebar-accent);"></h2>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
